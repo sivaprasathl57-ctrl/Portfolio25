@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling & hardware acceleration */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-color: #020204;
+}
+
+body {
+  background-color: #020204;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Floating Motion Animations for Cybersecurity Tool Badges */
+@keyframes float-1 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-2 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes float-3 {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-8px) translateX(5px);
+  }
+}
+
+@keyframes float-4 {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(7px) translateX(-5px);
+  }
+}
+
+@keyframes float-5 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-11px) rotate(-1deg);
+  }
+}
+
+@keyframes float-6 {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(10px) rotate(1deg);
+  }
+}
+
+.animate-float-1 {
+  animation: float-1 4.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-2 {
+  animation: float-2 4.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-3 {
+  animation: float-3 5.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-4 {
+  animation: float-4 3.9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-5 {
+  animation: float-5 5.0s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-6 {
+  animation: float-6 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Cyber Animated Border Traveling Keyframes */
+@keyframes cyberBorderTravel {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes cyberBorderTravelReverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.animate-cyber-border {
+  animation: cyberBorderTravel 7s linear infinite;
+}
+
+.animate-cyber-border-reverse {
+  animation: cyberBorderTravelReverse 8.5s linear infinite;
+}
+
+/* Vulnerability Scanner Laser Sweep Animation */
+@keyframes laserSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+.animate-laser-sweep {
+  animation: laserSweep 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Premium Cyber Info Box & Card Effects */
+.cyber-card {
+  position: relative;
+  background: rgba(13, 16, 26, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 223, 216, 0.7), rgba(168, 85, 247, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 223, 216, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(0, 223, 216, 0.18), 0 0 24px -6px rgba(168, 85, 247, 0.16);
+}
+
+.cyber-card:hover::before {
+  opacity: 1;
+}
+
+/* Subtle corner accent HUD for info boxes */
+.cyber-corner {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+}
+
+.cyber-card:hover .cyber-corner {
+  opacity: 1;
+}
+
+.cyber-corner-tl {
+  top: 6px;
+  left: 6px;
+  border-top: 1.5px solid #00dfd8;
+  border-left: 1.5px solid #00dfd8;
+}
+
+.cyber-corner-tr {
+  top: 6px;
+  right: 6px;
+  border-top: 1.5px solid #00dfd8;
+  border-right: 1.5px solid #00dfd8;
+}
+
+.cyber-corner-bl {
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 1.5px solid #00dfd8;
+  border-left: 1.5px solid #00dfd8;
+}
+
+.cyber-corner-br {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 1.5px solid #00dfd8;
+  border-right: 1.5px solid #00dfd8;
+}
+
+/* Interactive Badge Hover Glow */
+.cyber-badge {
+  transition: all 0.25s ease;
+}
+
+.cyber-badge:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(0, 223, 216, 0.6);
+  box-shadow: 0 0 12px rgba(0, 223, 216, 0.3);
+  color: #ffffff;
+}
+/* pas j*jN26A-
+Github
+442728149551
+git clone https://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/Github
+Github-at-442728149551
+FeELyA+Wu7xTTvvbSuP4r/GK+cuQtSO+trOf5W89broKmapZheDvN9Wf9kY=
+*/
