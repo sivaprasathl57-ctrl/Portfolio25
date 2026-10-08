@@ -19,7 +19,6 @@ const hunts: Hunt[] = [
     subCategory: 'SQL Injection',
     title: 'Critical SQL Injection in Database Layer',
     description: 'Unsanitized user input in backend queries allowed unauthorized database manipulation and full data exposure.',
-    status: 'Responsibly Disclosed & Fixed',
     cvss: '9.8',
   },
  
