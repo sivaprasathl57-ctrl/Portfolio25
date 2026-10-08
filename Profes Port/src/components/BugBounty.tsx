@@ -22,26 +22,7 @@ const hunts: Hunt[] = [
     status: 'Responsibly Disclosed & Fixed',
     cvss: '9.8',
   },
-  {
-    id: 'idor',
-    severity: 'HIGH',
-    category: 'Access Control',
-    subCategory: 'IDOR',
-    title: 'IDOR — Sensitive Data Exposure via ID Enumeration',
-    description: 'Sequential, predictable object IDs allowed unauthorized viewing of other users\' private records without authorization checks.',
-    status: 'Responsibly Disclosed & Fixed',
-    cvss: '8.5',
-  },
-  {
-    id: 'stored-xss',
-    severity: 'HIGH',
-    category: 'XSS',
-    subCategory: 'Stored XSS',
-    title: 'Stored XSS in User Comment Section',
-    description: 'Improper HTML sanitization in comment functionality allowed persistent XSS attacks affecting all users viewing comments.',
-    status: 'Responsibly Disclosed & Fixed',
-    cvss: '7.8',
-  },
+ 
 ];
 
 function BugBountyParallaxCard({ hunt }: { hunt: Hunt }) {
